@@ -1,13 +1,12 @@
 # code-server-deploy-container
 
-An container image built for deploying code-server.
+Automated Code Server Deployment Using Docker and Heroku.
 
 ## Guides
 
-- [Deploy on Railway](../guides/railway.md)
 - [Deploy on Heroku](../guides/heroku.md)
 
-Docker Hub: `bencdr/code-server-deploy-container`
+Docker Hub: `jodis/codeserver:latest`
 
 To run the container locally, you can use:
 
@@ -16,23 +15,21 @@ docker run -p 127.0.0.1:8080:8080 \
   -v "$PWD/project:/home/coder/project" \
   -u "$(id -u):$(id -g)" \
   -e "DOCKER_USER=$USER" \
-  -e "PASSWORD=12345" \
-  -it bencdr/code-server-deploy-container:latest
+  -e "PASSWORD=$PASSWORD" \
+  -it jodis/codeserver:latest
 ```
 
 ## Modifying your code-server environment
 
-To update your code-server version, modify the version number on line 2 in your Dockerfile. See the [list of tags](https://hub.docker.com/r/codercom/code-server/tags?page=1&ordering=last_updated) for the latest version.
+To update modify the version number on line 2 in the Dockerfile. See the [list of tags (https://hub.docker.com/repository/docker/jodis/codeserver/tags?page=1&ordering=last_updated) for the latest version.
 
-We've included some examples on how to add additoonal dependencies in the root-level [Dockerfile](../Dockerfile):
 
 ```Dockerfile
-# Install a VS Code extension:
-# Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
-RUN code-server --install-extension esbenp.prettier-vscode
+# Installs a VS Code extension:
+RUN code-server --install-extension <EXTENSION_NAME>
 
-# Install apt packages:
-RUN sudo apt-get install -y ubuntu-make
+# Install packages:
+RUN sudo apt-get install -y <PACKAGE_NAME>
 
 # Copy files:
 COPY deploy-container/myTool /home/coder/myTool
