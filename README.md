@@ -1,5 +1,4 @@
-# Visual Studio Code Server 🚀 <br> [![Publish to Docker Hub](https://github.com/jodisfields/codeserver/actions/workflows/to-dockerhub.yml/badge.svg?branch=main)](https://github.com/jodisfields/codeserver/actions/workflows/to-dockerhub.yml)
-
+# Visual Studio Code Server 🚀 <br> [![Build Docker Image](https://github.com/jodisfields/codeserver/actions/workflows/to-dockerhub.yml/badge.svg)](https://github.com/jodisfields/codeserver/actions/workflows/to-dockerhub.yml)
 
 ### Deploy Locally
 
