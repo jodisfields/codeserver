@@ -1,8 +1,8 @@
-# Code Server 🚀
+# Visual Studio Code Server 🚀 <br> [![Publish to Docker Hub](https://github.com/jodisfields/codeserver/actions/workflows/to-dockerhub.yml/badge.svg?branch=main)](https://github.com/jodisfields/codeserver/actions/workflows/to-dockerhub.yml)
 
-[![Publish to Docker Hub](https://github.com/jodisfields/codeserver/actions/workflows/to-dockerhub.yml/badge.svg?branch=main)](https://github.com/jodisfields/codeserver/actions/workflows/to-dockerhub.yml)
 
-To run the container locally, you can use:
+### Deploy Locally
+
 
 ```console
 docker run jodis/codeserver -p 127.0.0.1:8080:8080 \
@@ -13,7 +13,7 @@ docker run jodis/codeserver -p 127.0.0.1:8080:8080 \
   -it jodis/codeserver:latest
 ```
 
-## Modifying your code-server environment
+### Modifying your code-server environment
 
 To update modify the version number on line 2 in the Dockerfile. See the [list of tags](https://hub.docker.com/repository/docker/jodis/codeserver/tags?page=1&ordering=last_updated) for the latest version.
 
