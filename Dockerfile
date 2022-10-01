@@ -1,5 +1,5 @@
 # Start from the code-server Debian base image
-FROM codercom/code-server:3.12.0
+FROM codercom/code-server:latest
 
 USER coder
 
@@ -29,7 +29,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
 
-# Copy files: 
+# Copy files:
 # COPY deploy-container/myTool /home/coder/myTool
 
 # -----------

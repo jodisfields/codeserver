@@ -3,5 +3,18 @@
   "git.postCommitCommand": "sync",
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "editor.fontLigatures": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.mouseWheelZoom": false,
+  "editor.parameterHints.cycle": true,
+  "editor.smoothScrolling": true,
+  "editor.stablePeek": true,
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.fontSize": 16
 }
